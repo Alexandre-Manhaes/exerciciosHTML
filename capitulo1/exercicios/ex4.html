@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Pedido</title>
+</head>
+<body>
+
+<form action="#" method="post">
+
+    <fieldset>
+        <legend>Informações do Cliente</legend>
+
+        <!-- Nome -->
+        <label for="nome">Nome Completo:</label><br>
+        <input type="text" id="nome" name="nome" required autocomplete="name"><br><br>
+
+        <!-- Email -->
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required autocomplete="email"><br><br>
+
+        <!-- Telefone -->
+        <label for="telefone">Telefone:</label><br>
+        <input 
+            type="tel" 
+            id="telefone" 
+            name="telefone" 
+            required
+            pattern="\(\d{2}\) \d{5}-\d{4}" 
+            title="Digite no formato (XX) XXXXX-XXXX"
+            placeholder="(XX) XXXXX-XXXX"
+        ><br><br>
+
+        <!-- Senha -->
+        <label for="senha">Senha de Acesso:</label><br>
+        <input 
+            type="password" 
+            id="senha" 
+            name="senha" 
+            minlength="8" 
+            pattern=".{8,}" 
+            required
+            title="A senha deve possuir no mínimo 8 caracteres."
+        ><br><br>
+
+        <!-- Site Opcional -->
+        <label for="site">Site (Opcional):</label><br>
+        <input type="url" id="site" name="site" placeholder="https://exemplo.com"><br>
+    </fieldset>
+
+    <br>
+
+    <!-- ======================= SEÇÃO 2 ======================= -->
+    <fieldset>
+        <legend>Detalhes do Pedido</legend>
+
+        <!-- Cor do Produto -->
+        <label for="cor">Cor Preferencial:</label><br>
+        <input type="color" id="cor" name="cor"><br><br>
+
+        <!-- Data e Hora -->
+        <label for="datahora">Data e Hora da Entrega:</label><br>
+        <input 
+            type="datetime-local" 
+            id="datahora" 
+            name="datahora"
+            min="2026-01-01T00:00"
+            max="2026-12-31T23:59"
+            required
+        ><br><br>
+
+        <!-- Slider -->
+        <label for="quantidade">Quantidade de Itens (1 a 10):</label><br>
+        <input 
+            type="range" 
+            id="quantidade" 
+            name="quantidade" 
+            min="1" 
+            max="10" 
+            value="5"
+        ><br><br>
+
+        <!-- Modelos com datalist -->
+        <label for="modelo">Modelo de Produto:</label><br>
+        <input list="modelos" id="modelo" name="modelo" required>
+        <datalist id="modelos">
+            <option value="Laptop Pro">
+            <option value="Tablet Slim">
+            <option value="Smartwatch X">
+        </datalist>
+    </fieldset>
+
+    <br>
+
+    <!-- ======================= SEÇÃO 3 ======================= -->
+    <fieldset>
+        <legend>Opções de Envio</legend>
+
+        <!-- Radio de envio -->
+        <p>Tipo de Envio:</p>
+        <input type="radio" id="normal" name="envio" value="normal" checked>
+        <label for="normal">Envio Normal</label><br>
+
+        <input type="radio" id="expresso" name="envio" value="expresso">
+        <label for="expresso">Envio Expresso</label><br><br>
+
+        <!-- Comentários -->
+        <label for="comentarios">Comentários Adicionais:</label><br>
+        <textarea 
+            id="comentarios" 
+            name="comentarios" 
+            minlength="10" 
+            maxlength="300" 
+            rows="5"
+            placeholder="Digite seus comentários..."
+        ></textarea>
+    </fieldset>
+
+    <br>
+
+    <!-- ======================= SEÇÃO 4 ======================= -->
+    <fieldset>
+        <legend>Finalização</legend>
+
+        <!-- Termos -->
+        <input type="checkbox" id="termos" name="termos" required>
+        <label for="termos">Eu concordo com os Termos de Serviço</label><br><br>
+
+        <!-- Botão -->
+        <button type="submit">Finalizar Pedido</button>
+    </fieldset>
+
+</form>
+
+</body>
+</html>
