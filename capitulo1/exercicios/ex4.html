@@ -9,7 +9,7 @@
 <form action="#" method="post">
 
     <fieldset>
-        <legend>Informações do(a) Cliente</legend>
+        <legend>Informações do Cliente</legend>
 
         <!-- Nome -->
         <label for="nome">Nome Completo:</label><br>
@@ -29,7 +29,7 @@
             pattern="\(\d{2}\) \d{5}-\d{4}" 
             title="Digite no formato (XX) XXXXX-XXXX"
             placeholder="(XX) XXXXX-XXXX"
-        ><br><br>
+    
 
         <!-- Senha -->
         <label for="senha">Senha de Acesso:</label><br>
@@ -41,8 +41,7 @@
             pattern=".{8,}" 
             required
             title="A senha deve possuir no mínimo 8 caracteres."
-        ><br><br>
-
+      
         <!-- Site Opcional -->
         <label for="site">Site (Opcional):</label><br>
         <input type="url" id="site" name="site" placeholder="https://exemplo.com"><br>
@@ -65,7 +64,7 @@
         min="2026-01-01T00:00"
         max="2026-12-31T23:59"
         required
-    ><br><br>
+
 
     <label for="quantidade">Quantidade de Itens (1 a 10):</label><br>
     <input 
@@ -75,7 +74,6 @@
         min="1" 
         max="10" 
         value="5"
-    ><br><br>
 
     <label for="modelo">Modelo de Produto:</label><br>
     <input list="modelos" id="modelo" name="modelo" required>
