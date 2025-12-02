@@ -51,44 +51,53 @@
     <br>
 
     <!-- ======================= SEÇÃO 2 ======================= -->
-    <fieldset>
-        <legend>Detalhes do Pedido</legend>
+  <fieldset>
+    <legend>Detalhes do Pedido</legend>
 
-        <!-- Cor do Produto -->
-        <label for="cor">Cor Preferencial:</label><br>
-        <input type="color" id="cor" name="cor"><br><br>
+    <label for="cor">Cor Preferencial:</label><br>
+    <input type="color" id="cor" name="cor"><br><br>
 
-        <!-- Data e Hora -->
-        <label for="datahora">Data e Hora da Entrega:</label><br>
-        <input 
-            type="datetime-local" 
-            id="datahora" 
-            name="datahora"
-            min="2026-01-01T00:00"
-            max="2026-12-31T23:59"
-            required
-        ><br><br>
+    <label for="datahora">Data e Hora da Entrega:</label><br>
+    <input 
+        type="datetime-local" 
+        id="datahora" 
+        name="datahora"
+        min="2026-01-01T00:00"
+        max="2026-12-31T23:59"
+        required
+    ><br><br>
 
-        <!-- Slider -->
-        <label for="quantidade">Quantidade de Itens (1 a 10):</label><br>
-        <input 
-            type="range" 
-            id="quantidade" 
-            name="quantidade" 
-            min="1" 
-            max="10" 
-            value="5"
-        ><br><br>
+    <label for="quantidade">Quantidade de Itens (1 a 10):</label><br>
+    <input 
+        type="range" 
+        id="quantidade" 
+        name="quantidade" 
+        min="1" 
+        max="10" 
+        value="5"
+    ><br><br>
 
-        <!-- Modelos com datalist -->
-        <label for="modelo">Modelo de Produto:</label><br>
-        <input list="modelos" id="modelo" name="modelo" required>
-        <datalist id="modelos">
-            <option value="Laptop Pro">
-            <option value="Tablet Slim">
-            <option value="Smartwatch X">
-        </datalist>
-    </fieldset>
+    <label for="modelo">Modelo de Produto:</label><br>
+    <input list="modelos" id="modelo" name="modelo" required>
+    <datalist id="modelos">
+        <option value="Laptop Pro">
+        <option value="Tablet Slim">
+        <option value="Smartwatch X">
+    </datalist>
+    <br><br>
+
+    <!-- NOVO CAMPO -->
+    <label for="comprovante">Comprovante de Compra (JPG, PNG ou PDF):</label><br>
+    <input 
+        type="file" 
+        id="comprovante" 
+        name="comprovante" 
+        accept=".jpg, .jpeg, .png, .pdf"
+        required
+    ><br><br>
+
+</fieldset>
+
 
     <br>
 
